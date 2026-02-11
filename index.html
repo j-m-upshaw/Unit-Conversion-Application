@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- This is your page title that appears on the browser window or tab -->
     <title>Unit Conversions</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -14,116 +15,129 @@
         <!-- This is the main heading -->
         <header><b>Unit Conversions</b></header>
         <nav>
-            <!-- Button for redirecting users to the temperature section -->
-            <a href="#temperature"><button>Temperature</button></a>
-            <!-- Button for redirecting users to the weight section -->
-            <a href="#weight"><button>Weight</button></a>
-            <!-- Button for redirecting users to the distance section -->
-            <a href="#distance"><button>Distance</button></a>
+            <div class="topdiv">
+                <!-- Button for redirecting users to the temperature section -->
+                <a href="#temperature"><button class="topmenu">Temperature</button></a>
+                <!-- Button for redirecting users to the weight section -->
+                <a href="#weight"><button class="topmenu">Weight</button></a>
+                <!-- Button for redirecting users to the distance section -->
+                <a href="#distance"><button class="topmenu">Distance</button></a>
+            </div>
         </nav>
+    </section>
+    <div style="clear:both;"></div>
 
-        <div id="all-conversion-sections">
-            <!-- Holds all conversion sections-->
-            <section id="temperature">
-                <!-- Temperature conversion sections and available options -->
-                <div id="tmp">
-                    <figure>
-                        <img alt="picture of a thermometer"
-                            src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/thermo.png"
-                            width="200px" />
-                        <figcaption>Celsius to Fahrenheit Conversion</figcaption>
-                    </figure>
-                    <article>
-                        <!-- Contains specific elements for temp conversions-->
-                        <fieldset>
-                            <legend>Temperature</legend>
-                            <!-- Fields and button for temp input entered here-->
-                            <label for="celsius">Celsius</label><br />
+    <div id="all-conversion-sections">
+        <!-- Holds all conversion sections-->
+        <section id="temperature" class="b temperature">
+            <!-- Temperature conversion sections and available options -->
+            <div id="tmp">
+                <figure>
+                    <img alt="picture of a thermometer"
+                        src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/thermo.png"
+                        width="200px" />
+                    <figcaption>Celsius to Fahrenheit Conversion</figcaption>
+                </figure>
+                <article>
+                    <!-- Contains specific elements for temp conversions-->
+                    <fieldset>
+                        <legend>Temperature</legend>
+                        <!-- Fields and button for temp input entered here-->
+                        <label for="celsius">Celsius</label><br />
 
-                            <input type="number" id="celsius" /> <br />
+                        <input type="number" id="celsius" /> <br />
 
-                            <!-- The conversion button -->
-                            <button id="temperature"> Convert </button> <br />
+                        <!-- The conversion button -->
+                        <button id="temperature"> Convert </button> <br />
 
-                            <input type="number" id="fahrenheit"> <br />
+                        <input type="number" id="fahrenheit"> <br />
 
-                            <label for="fahrenheit">Fahrenheit</label>
-                        </fieldset>
-                    </article>
+                        <label for="fahrenheit">Fahrenheit</label>
+                    </fieldset>
                     <aside>
                         To convert celsius to fahrenheit yourself, use this formula replacing the `C` with your
                         temperature in celsius: (C ×
                         9/5) + 32
                     </aside>
-                </div>
-            </section>
-            <section id="weight">
-                <div id="wgt">
-                    <figure>
-                        <img alt=""
-                            src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/weight.png"
-                            width="200px" />
-                        <figcaption>Kilograms to Pounds Conversion</figcaption>
-                    </figure>
-                    <article>
-                        <fieldset>
-                            <legend>Weight</legend>
-                            <!-- Fields and button for weight input entered here-->
-                            <label for="kilograms">Kilograms</label><br />
+                </article>
+            </div>
+        </section>
 
-                            <input type="number" id="kilograms" /> <br />
+        <div style="clear:both;"></div>
 
-                            <!-- The conversion button -->
-                            <button id="temperature"> Convert </button> <br />
+        <section id="weight" class="b weight">
+            <div id="wgt">
+                <figure>
+                    <img alt=""
+                        src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/weight.png"
+                        width="150px" />
+                    <figcaption>Kilograms to Pounds Conversion</figcaption>
+                </figure>
+                <article>
+                    <fieldset>
+                        <legend>Weight</legend>
+                        <!-- Fields and button for weight input entered here-->
+                        <label for="kilo">KG</label><br />
 
-                            <input type="number" id="pounds"> <br />
+                        <input type="number" id="kilo" /> <br />
 
-                            <label for="pounds">Pounds</label>
-                        </fieldset>
-                    </article>
+                        <!-- The conversion button -->
+                        <button id="weight"> Convert </button> <br />
+
+                        <input type="number" id="pounds"> <br />
+
+                        <label for="pounds">Pounds</label>
+                    </fieldset>
                     <aside>To convert kilograms to pounds yourself, use this formula replacing the `kg` with your
                         weight in kilograms: (kg x 2.205)</aside>
-                </div>
-            </section>
-            <section id="distance">
-                <div id="dist">
-                    <figure>
-                        <img alt="speed sign"
-                            src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/speedo.png"
-                            width="200px" />
-                        <figcaption>Kilometers to Miles</figcaption>
-                    </figure>
-                    <article>
-                        <fieldset>
-                            <legend>Distance</legend>
-                            <!-- Fields and button for weight input entered here-->
-                            <label for="kilometers">Kilometers</label><br />
+                </article>
+            </div>
+        </section>
 
-                            <input type="number" id="kilometers" /> <br />
+        <div style="clear:both;"></div>
 
-                            <!-- The conversion button -->
-                            <button id="distance"> Convert </button> <br />
+        <section id="distance" class="b distance">
+            <div id="dist">
+                <figure>
+                    <img alt="speed sign"
+                        src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/speedo.png"
+                        width="150px" />
+                    <figcaption>Kilometers to Miles</figcaption>
+                </figure>
+                <article>
+                    <fieldset>
+                        <legend>Distance</legend>
+                        <!-- Fields and button for weight input entered here-->
+                        <label for="km">KM</label><br />
 
-                            <input type="number" id="distance"> <br />
+                        <input type="number" id="km" /> <br />
 
-                            <label for="distance">Miles</label>
-                        </fieldset>
-                    </article>
+                        <!-- The conversion button -->
+                        <button id="distance"> Convert </button> <br />
+
+                        <input type="number" id="miles"> <br />
+
+                        <label for="miles">Miles</label>
+                    </fieldset>
                     <aside>
                         To convert kilometers to miles yourself, use this formula replacing the `km` with your
                         distance in kilometers: (km ÷ 1.609)
                     </aside>
-                </div>
-            </section>
-        </div>
-        <div id="go-home">
-            <a href="#home">
-                <img alt="home picture"
-                    src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/home.svg" />
-            </a>
-        </div>
-        <footer>Learn more about HTML as a part of the IBM Fullstack Cloud Developer Certification</footer>
-    </section>
+                </article>
+            </div>
+        </section>
+
+        <div style="clear:both;"></div>
+
+    </div>
+
+    <div id="go-home" class="iconbutton">
+        <a href="#home">
+            <img alt="home picture"
+                src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/home.svg" />
+        </a>
+    </div>
+    <footer>Learn more about HTML as a part of the IBM Fullstack Cloud Developer Certification</footer>
 </body>
 
 </html>
